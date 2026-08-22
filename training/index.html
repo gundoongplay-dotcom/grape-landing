@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>강의 현장 — 그레이프이엔엘</title>
+<meta name="description" content="그레이프이엔엘이 실제로 운영한 기업교육 현장 기록. 팀빌딩·조직활성화·리더십 과정의 진행 사례를 정리합니다." />
+<meta property="og:title" content="강의 현장 — 그레이프이엔엘" />
+<meta property="og:description" content="실제로 운영한 기업교육 현장 기록" />
+<meta property="og:image" content="https://grape-landing-site.vercel.app/training/224386738243.jpg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍇</text></svg>" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0b0d12; --fg:#f2f4f8; --muted:#9aa3b2;
+    --accent:#7c5cff; --accent2:#00d4ff; --card:rgba(255,255,255,.04);
+    --border:rgba(255,255,255,.09);
+  }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pretendard","Noto Sans KR",sans-serif;
+    background:var(--bg); color:var(--fg); -webkit-font-smoothing:antialiased;
+    min-height:100vh; overflow-x:hidden;
+  }
+  .glow{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .glow::before,.glow::after{content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.4}
+  .glow::before{width:520px;height:520px;background:var(--accent);top:-180px;left:-140px}
+  .glow::after{width:420px;height:420px;background:var(--accent2);bottom:-200px;right:-120px;opacity:.24}
+  .wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 24px}
+  header{display:flex;align-items:center;justify-content:space-between;padding:28px 0}
+  .logo{font-weight:700;letter-spacing:-.02em;font-size:18px;color:var(--fg);text-decoration:none}
+  nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}
+  nav a:hover,nav a.on{color:var(--fg)}
+  .head{padding:64px 0 40px}
+  .badge{display:inline-block;padding:6px 14px;border:1px solid var(--border);border-radius:999px;
+    font-size:13px;color:var(--muted);background:var(--card);margin-bottom:24px}
+  h1{font-size:clamp(30px,5.5vw,52px);line-height:1.12;letter-spacing:-.035em;font-weight:800}
+  h1 span{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .sub{margin-top:20px;max-width:640px;color:var(--muted);font-size:clamp(15px,2.2vw,17px);line-height:1.75}
+  .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;padding:16px 0 80px}
+  .item{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;
+    text-decoration:none;color:inherit;display:flex;flex-direction:column;
+    transition:transform .16s ease,border-color .16s ease}
+  .item:hover{transform:translateY(-3px);border-color:rgba(124,92,255,.5)}
+  .item img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#15171f}
+  .body{padding:20px 20px 22px}
+  .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+  .chip{font-size:12px;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:3px 10px}
+  .date{font-size:12px;color:var(--muted)}
+  .item h3{font-size:16px;line-height:1.45;letter-spacing:-.01em;margin-bottom:8px}
+  .item p{color:var(--muted);font-size:13.5px;line-height:1.65}
+  .more{margin-top:14px;font-size:13px;color:var(--accent2)}
+  .empty{color:var(--muted);font-size:14px;padding:40px 0}
+  footer{border-top:1px solid var(--border);padding:28px 0 48px;color:var(--muted);font-size:13px}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">🍇 grape<span style="color:var(--muted)">.dev</span></a>
+    <nav>
+      <a href="/">Home</a>
+      <a class="on" href="/training/">강의 현장</a>
+      <a href="mailto:gundoongplay@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <section class="head">
+    <div class="badge">📌 교육 진행 사례</div>
+    <h1>실제로 운영한<br><span>강의 현장</span> 기록</h1>
+    <p class="sub">팀빌딩·조직활성화·리더십 과정을 현장에서 어떻게 설계하고 운영했는지 정리합니다.
+      고객사는 모두 익명으로 표기하며, 현장 사진은 참가자 보호를 위해 얼굴과 명찰을 처리한 뒤 공개합니다.</p>
+  </section>
+
+  <section class="list" id="list">
+    <a class="item" href="https://impodo.tistory.com/3" target="_blank" rel="noopener">
+      <img src="/training/224386738243.jpg" alt="타운홀 미팅 팀빌딩 — 서바이벌 레이싱 팀빌딩 현장" loading="lazy" />
+      <div class="body">
+        <div class="meta">
+          <span class="chip">팀빌딩 · 조직활성화</span>
+          <span class="date">2026.08.22</span>
+        </div>
+        <h3>타운홀 미팅 팀빌딩 — 10개 팀, 2시간 30분</h3>
+        <p>경쟁을 붙이되 경쟁만으로는 이길 수 없게 설계해, 참가자가 스스로 다른 팀을 찾아가게 만든 서바이벌 레이싱 팀빌딩 운영 사례.</p>
+        <div class="more">진행 사례 자세히 보기 →</div>
+      </div>
+    </a>
+  </section>
+
+  <footer>
+    <p>교육 문의 · gundoongplay@gmail.com / 010-8736-2523</p>
+    <p style="margin-top:8px">© 2026 그레이프이엔엘</p>
+  </footer>
+</div>
+</body>
+</html>
