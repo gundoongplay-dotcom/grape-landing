@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>기획보고서 작성법 — 현황·문제점·대안 순서로 쓰는 이유 | 강의 현장 · 그레이프이엔엘</title>
+<meta name="description" content="F사 기획력 및 보고서 작성 과정 운영 사례. 보고서 유형 구분부터 현황·문제점·대안 스토리라인, 개조식 문장 다듬기, 팀 탈고까지 네 개 모듈로 설계한 하루 과정 기록." />
+<meta property="og:title" content="기획보고서 작성법 — 현황·문제점·대안 순서로 쓰는 이유" />
+<meta property="og:description" content="교육이 끝날 때 참가자 손에 기획보고서 초안 한 장이 남도록 설계한 과정 기록" />
+<meta property="og:image" content="https://grape-landing-site.vercel.app/training/224387177790.jpg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍇</text></svg>" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0b0d12; --fg:#f2f4f8; --muted:#9aa3b2;
+    --accent:#7c5cff; --accent2:#00d4ff; --card:rgba(255,255,255,.04);
+    --border:rgba(255,255,255,.09);
+  }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Pretendard","Noto Sans KR",sans-serif;
+    background:var(--bg); color:var(--fg); -webkit-font-smoothing:antialiased;
+    min-height:100vh; overflow-x:hidden;
+  }
+  .glow{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .glow::before,.glow::after{content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.4}
+  .glow::before{width:520px;height:520px;background:var(--accent);top:-180px;left:-140px}
+  .glow::after{width:420px;height:420px;background:var(--accent2);bottom:-200px;right:-120px;opacity:.24}
+  .wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 24px}
+  header{display:flex;align-items:center;justify-content:space-between;padding:28px 0}
+  .logo{font-weight:700;letter-spacing:-.02em;font-size:18px;color:var(--fg);text-decoration:none}
+  nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:14px}
+  nav a:hover,nav a.on{color:var(--fg)}
+  .head{padding:48px 0 28px}
+  .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+  .chip{font-size:12px;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:4px 12px;background:var(--card)}
+  h1{font-size:clamp(26px,4.6vw,40px);line-height:1.24;letter-spacing:-.03em;font-weight:800}
+  h1 span{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .lead{margin-top:20px;color:var(--muted);font-size:clamp(15px,2.2vw,17px);line-height:1.8}
+  .cover{width:100%;border-radius:18px;border:1px solid var(--border);display:block;margin:32px 0 8px;background:#15171f}
+  article{padding-bottom:24px}
+  article h2{font-size:clamp(20px,3vw,25px);line-height:1.35;letter-spacing:-.02em;
+    font-weight:750;margin:48px 0 16px;padding-left:14px;border-left:3px solid var(--accent)}
+  article p{color:#dfe4ee;font-size:16px;line-height:1.85;margin:14px 0}
+  article figure{margin:30px 0}
+  article figure img{width:100%;border-radius:16px;border:1px solid var(--border);display:block;background:#15171f}
+  article figcaption{margin-top:10px;font-size:13px;color:var(--muted);text-align:center;line-height:1.6}
+  blockquote{margin:26px 0;padding:20px 22px;background:var(--card);border:1px solid var(--border);
+    border-left:3px solid var(--accent2);border-radius:0 14px 14px 0;
+    font-size:17px;line-height:1.7;letter-spacing:-.01em;font-weight:600}
+  ul{margin:16px 0 16px 2px;list-style:none}
+  ul li{position:relative;padding-left:20px;color:#dfe4ee;font-size:15.5px;line-height:1.8;margin:8px 0}
+  ul li::before{content:"";position:absolute;left:2px;top:12px;width:6px;height:6px;border-radius:50%;background:var(--accent2)}
+  .note{margin:34px 0 0;padding:18px 20px;background:var(--card);border:1px solid var(--border);
+    border-radius:14px;color:var(--muted);font-size:14px;line-height:1.75}
+  .cta{margin:44px 0 8px;padding:26px 24px;border:1px solid var(--border);border-radius:18px;background:var(--card)}
+  .cta h3{font-size:18px;letter-spacing:-.02em;margin-bottom:10px}
+  .cta p{color:var(--muted);font-size:14.5px;line-height:1.75;margin:0 0 16px}
+  .btn{display:inline-block;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:600;text-decoration:none}
+  .btn-p{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#0b0d12}
+  .back{display:inline-block;margin:34px 0 0;color:var(--accent2);font-size:14px;text-decoration:none}
+  footer{border-top:1px solid var(--border);margin-top:44px;padding:28px 0 48px;color:var(--muted);font-size:13px}
+  footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/">🍇 grape<span style="color:var(--muted)">.dev</span></a>
+    <nav>
+      <a href="/">Home</a>
+      <a class="on" href="/training/">강의 현장</a>
+      <a href="mailto:im_podo@nate.com">Contact</a>
+    </nav>
+  </header>
+
+  <section class="head">
+    <div class="meta">
+      <span class="chip">기획력 · 보고서 작성</span>
+      <span class="chip">F사 · 하루 과정</span>
+      <span class="chip">2026.08.23</span>
+    </div>
+    <h1>기획보고서 작성법,<br>왜 <span>현황·문제점·대안</span> 순서로 써야 할까</h1>
+    <p class="lead">보고서가 자꾸 반려되는 이유는 문장력이 부족해서가 아닙니다.
+      쓴 사람이 알고 있는 순서대로 썼기 때문입니다. 두 달 동안 그 일을 붙잡고 있던 담당자는
+      배경부터 설명하고 싶지만, 결재하는 사람은 그 두 달을 모릅니다.</p>
+  </section>
+
+  <img class="cover" src="/training/224387177790/00.jpg" alt="F사 기획력 및 보고서 작성 과정 — 기획보고서를 보고 또 보고" />
+
+  <article>
+    <p>한 기업에서 진행한 기획력 및 보고서 작성 과정은 이 지점에서 출발했습니다.
+      네 개의 모듈이 하나의 보고서로 이어지도록 설계해, 교육이 끝날 때 참가자 손에
+      기획보고서 초안 한 장이 남도록 했습니다. 아래는 그 과정을 어떻게 설계하고 운영했는지 정리한 기록입니다.</p>
+
+    <h2>보고서 교육이 문장 교정에서 끝나는 이유</h2>
+    <p>보고서 교육을 '글 잘 쓰는 법'으로 잡으면 맞춤법과 문장 다듬기에서 시간이 다 갑니다.
+      그런데 실제 반려 사유를 모아 보면 문장 문제는 소수입니다. 대부분은 목차 단계에서 이미 갈립니다.</p>
+    <p>기획보고서를 써야 하는 상황에 현황보고서를 써 오거나, 결과보고서 자리에 계획을 채워 오는 식입니다.
+      유형이 다르면 목차가 다르고, 목차가 다르면 결재자가 찾는 정보가 그 자리에 없습니다.</p>
+    <blockquote>보고서는 잘 쓰는 문제가 아니라, 읽는 사람 순서대로 쓰는 문제입니다.</blockquote>
+    <p>그래서 이 과정은 문장을 손보기 전에 '지금 내가 써야 할 보고서가 무엇인가'를 먼저 가릅니다.
+      순서를 바꾸면 첫 장이 바뀝니다.</p>
+
+    <figure>
+      <img src="/training/224387177790/01.jpg" alt="기획보고서 작성 교육 현장 — 참가자들이 개별 실습을 진행하는 모습" loading="lazy" />
+      <figcaption>참가자 보호를 위해 얼굴과 명찰은 처리한 뒤 공개합니다</figcaption>
+    </figure>
+
+    <h2>1모듈 — 지식의 저주에서 벗어나기</h2>
+    <p>첫 모듈은 쓰기 전에 멈추는 연습입니다. 지식의 저주는 내가 아는 것을 상대도 알 것이라 착각하는
+      인지 편향을 말합니다. 보고서가 어려워지는 지점은 대부분 여기입니다.</p>
+    <p>상사의 의도를 먼저 파악하는 훈련을 넣은 것도 같은 이유입니다. 반려는 결과가 아니라 신호입니다.
+      무엇을 궁금해했는지 되짚으면 다음 보고서의 목차가 달라집니다.</p>
+    <p>이어서 상황 카드를 두고 어떤 보고서를 써야 하는지 판단해 봅니다. 기획·현황·결과 세 유형의
+      목차 차이를 직접 채워보면, 배경과 현황이 어떻게 다른지, 조치사항과 계획이 왜 같은 칸에
+      들어갈 수 없는지가 손으로 정리됩니다.</p>
+
+    <h2>2모듈 — 설득을 만드는 기획보고서 스토리라인</h2>
+    <p>설득해야 하는 기획보고서는 결국 하나의 흐름을 벗어나지 않습니다.
+      현황에서 문제점으로, 문제점에서 대안으로 이어지는 구조입니다.</p>
+
+    <figure>
+      <img src="/training/224387177790/02.jpg" alt="기획보고서 스토리라인 — 현황에서 문제점, 문제점에서 대안으로 이어지는 흐름" loading="lazy" />
+      <figcaption>현황 → 문제점 → 대안. 목차는 이 흐름 위에 놓입니다</figcaption>
+    </figure>
+
+    <p>말로 들으면 누구나 아는 흐름인데, 본인 업무로 써보면 현황 자리에 문제점이 들어가 있고
+      대안 자리에 이미 진행한 조치사항이 들어가 있습니다. 그래서 이 모듈은 설명을 짧게 하고
+      실습 시간을 길게 잡았습니다.</p>
+    <p>소재는 남의 사례가 아니라 참가자가 속한 회사의 기사문을 썼습니다. 우리 이야기로 해야
+      목차가 실제로 잡히기 때문입니다. 여기에 기획의 목적과 상대의 불편, 문제의 근본 원인을
+      되묻는 질문을 얹어 초안까지 밀고 나갔습니다.</p>
+
+    <figure>
+      <img src="/training/224387177790/03.jpg" alt="팀별 실습 현장 — 포스트잇으로 기획보고서 목차를 배열하는 모습" loading="lazy" />
+      <figcaption>순서를 바꿔 붙였다가 다시 떼는 그 과정 자체가 기획입니다</figcaption>
+    </figure>
+
+    <p>포스트잇이 붙기 시작하면 대체로 잘 굴러갑니다. 노트북을 열고 바로 문서를 쓰기 시작하면
+      이 장면은 나오지 않습니다.</p>
+
+    <h2>3모듈 — 서술형에서 단문형, 다시 개조식으로</h2>
+    <p>문장은 세 단계로 줄입니다. 길게 늘어놓은 서술형 문장을 단문으로 끊고, 단문을 명사형 어미의
+      개조식으로 바꿉니다. 한 번에 개조식으로 쓰려고 하면 정보가 통째로 빠지는데,
+      단계를 밟으면 그런 일이 줄어듭니다.</p>
+
+    <figure>
+      <img src="/training/224387177790/04.jpg" alt="서술형 문장을 개조식으로 다듬는 과정" loading="lazy" />
+      <figcaption>서술형 → 단문형 → 개조식. 한 번에 건너뛰지 않습니다</figcaption>
+    </figure>
+
+    <p>두괄식도 다시 정의합니다. 결론을 맨 앞에 옮겨 붙이는 것이 두괄식이라고 알고 있는 경우가 많은데,
+      실제로는 나열된 정보에서 헤드 메시지를 찾아내는 작업에 가깝습니다.
+      찾을 헤드 메시지가 없으면 앞에 옮길 결론도 없습니다.</p>
+    <p>시각화는 정성과 정량의 균형으로 접근합니다. 현상을 설명할 때는 서술로, 결론을 제시할 때는 숫자로.
+      표와 그래프는 예뻐 보여서 넣는 것이 아니라 결론을 세우는 자리에 넣습니다.</p>
+    <ul>
+      <li>쓸모 있는 정보와 단순한 사실을 구분합니다</li>
+      <li>MECE는 항목을 나누는 기준이지 장식이 아닙니다</li>
+      <li>같은 데이터라도 상황에 따라 맞는 그래프가 다릅니다</li>
+    </ul>
+
+    <h2>4모듈 — 팀 탈고, 남이 어디서 멈추는지 본다</h2>
+    <p>마지막 모듈은 탈고입니다. 개별로 완성한 초안을 팀원과 돌려 읽고 다시 고칩니다.
+      내 보고서를 남이 읽으면서 어디에서 멈추는지 지켜보는 것만큼 확실한 피드백이 없습니다.</p>
+    <p>이 단계를 넣으면 교육이 '들은 것'으로 끝나지 않습니다. 참가자는 초안 한 장을 들고 자리로 돌아가고,
+      그 문서는 다음 주 업무에 그대로 쓰입니다.</p>
+
+    <figure>
+      <img src="/training/224387177790/05.jpg" alt="기획력 및 보고서 작성 과정 강의 현장" loading="lazy" />
+      <figcaption>교육 화면에 띄워 둔 문구 — 기회를 만드는 획기적 기획</figcaption>
+    </figure>
+
+    <h2>좋은 기획은 아이디어가 아니라 불편에서 나옵니다</h2>
+    <p>거창해 보이지만 결론은 단순합니다. 좋은 기획은 번뜩이는 아이디어에서 나오는 것이 아니라,
+      상대가 지금 무엇이 불편한지를 정확히 짚는 데서 나옵니다.</p>
+
+    <div class="note">
+      다음과 같은 상황이라면 이 과정이 도움이 됩니다.
+      보고서 작성에 시간이 지나치게 오래 걸리는 경우,
+      다 썼는데도 "그래서 어떻게 하자는 것이냐"는 되물음을 받는 경우,
+      신입과 주니어에게 보고서를 가르쳐야 하는데 무엇부터 알려줘야 할지 모르겠는 경우입니다.
+    </div>
+
+    <div class="cta">
+      <h3>과정 문의</h3>
+      <p>그레이프이엔엘은 최신 AI 기술을 접목한 자체 개발 프로그램과 퍼실리테이션을 결합해,
+        교육 대상과 인원·목적에 맞는 커리큘럼을 설계합니다.<br />
+        교육 문의 · im_podo@nate.com / 010-8736-2523</p>
+      <a class="btn btn-p" href="mailto:im_podo@nate.com">교육 문의하기</a>
+    </div>
+
+    <a class="back" href="/training/">← 강의 현장 목록으로</a>
+  </article>
+
+  <footer>
+    <p>교육 문의 · im_podo@nate.com / 010-8736-2523</p>
+    <p style="margin-top:8px">© 2026 그레이프이엔엘</p>
+  </footer>
+</div>
+</body>
+</html>
