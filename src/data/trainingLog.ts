@@ -15,6 +15,15 @@ export type TrainingRecord = {
 
 export const trainingLog: TrainingRecord[] = [
   {
+    id: "224441821742",
+    title: "보고서 목차 순서, 어디서부터 써야 할까 (S사 대리급 보고서 작성법 8시간 후기)",
+    date: "2026-10-14",
+    summary: "보고서를 몇 번 써 본 직장인이 가장 많이 하는 말은 \"무엇을 써야 할지는 알겠는데 어디서부터 써야 할지 모르겠다\"입니다. 이 고민은 문장 실력의 문제가 아니라 보고서의 뼈대, 즉 목차 순서를 한 번도 제대로 배워 본 적이 없어서 생깁니다.",
+    thumbnail: "",
+    tags: ["보고서작성법", "보고서목차", "개조식", "대리급교육"],
+    url: "https://impodo.tistory.com/55"
+  },
+  {
     id: "224431798130",
     title: "기획보고서 작성법, 왜 결재에서 다시 돌아올까 (C공공기관 3시간 실습 후기)",
     date: "2026-10-05",
@@ -85,15 +94,6 @@ export const trainingLog: TrainingRecord[] = [
     thumbnail: "",
     tags: ["기자단교육", "두괄식", "기사작성법", "리드문"],
     url: "https://impodo.tistory.com/48"
-  },
-  {
-    id: "224166585844",
-    title: "서포터즈 저작권 교육, 무엇을 어떻게 알려줘야 할까",
-    date: "2026-03-02",
-    summary: "서포터즈가 올린 콘텐츠 때문에 손해배상 청구를 받는 일이 실제로 발생합니다. 본인은 인터넷에서 찾은 이미지를 별생각 없이 썼을 뿐입니다.",
-    thumbnail: "",
-    tags: ["서포터즈교육", "저작권", "콘텐츠리스크", "이미지저작권"],
-    url: "https://impodo.tistory.com/45"
   },
   {
     id: "224166609128",
