@@ -15,6 +15,15 @@ export type TrainingRecord = {
 
 export const trainingLog: TrainingRecord[] = [
   {
+    id: "224462063774",
+    title: "신입사원 업무관리 교육, 왜 성공 기준부터 적게 할까 (K기관 입문교육 후기)",
+    date: "2026-11-02",
+    summary: "신입사원이 처음 부딪히는 어려움은 일을 못해서 생기지 않습니다. 무엇을 해야 하는지, 어디까지 해야 잘한 것인지 모르는 상태로 일을 시작하기 때문에 생깁니다.",
+    thumbnail: "",
+    tags: ["신입사원교육", "입문교육", "업무관리", "시간관리"],
+    url: "https://impodo.tistory.com/56"
+  },
+  {
     id: "224441821742",
     title: "보고서 목차 순서, 어디서부터 써야 할까 (S사 대리급 보고서 작성법 8시간 후기)",
     date: "2026-10-14",
@@ -112,15 +121,6 @@ export const trainingLog: TrainingRecord[] = [
     thumbnail: "",
     tags: ["기자단교육", "기사작성법", "리드작성", "콘텐츠글쓰기"],
     url: "https://impodo.tistory.com/47"
-  },
-  {
-    id: "224166592076",
-    title: "서포터즈 AI 콘텐츠 기획 교육, 무엇을 가르쳐야 할까",
-    date: "2026-02-13",
-    summary: "같은 브랜드 서포터즈인데 콘텐츠 생산량이 세 배 차이 나는 경우가 있습니다. 능력의 차이가 아니라 AI를 활용할 줄 아느냐의 차이입니다.",
-    thumbnail: "",
-    tags: ["서포터즈교육", "AI콘텐츠기획", "프롬프트설계", "콘텐츠제작"],
-    url: "https://impodo.tistory.com/46"
   },
   {
     id: "224168347380",
